@@ -3,15 +3,19 @@ import java.util.Scanner;
 /*
  * @by Cedrick, Nassima, Fred & Baptiste
  */
+import static java.lang.Thread.sleep;
+
 public class Launcher {
 
     public static void main(String[] args) throws InterruptedException {
 
-         menu();
+
+        menu ();
+
          int lot = 0;
          while (true) {
              Scanner sc = new Scanner(System.in);
-             System.out.println("Combien de données/LOT pour chaque traitement en paraelle ! = ");
+             System.out.println("En combien de Lot souhaité vous optimiser votre traitement: ");
 
              if (sc.hasNextBigInteger()) {
                  lot = sc.nextInt();
@@ -41,7 +45,6 @@ public class Launcher {
         readFile.stop();
         writerFile.stop();
 
-
     }
 
     public static void menu()
@@ -49,7 +52,7 @@ public class Launcher {
 
         System.out.println("\n*************************************************************************************************");
         System.out.println("*       BIENVENUE SUR NOTRE PROJET JAVA DE TRAITEMENT MULTI-THREADING DE FICHIER PAR LOT        *");
-        System.out.println("*                        Edité par Nassima, Cedrick, Fred & Baptiste                            *");
+        System.out.println("*                 Edité par Nassima, Cedrick, Jordan , Fred & Baptiste                          *");
         System.out.println("*                           Encadré par M. Dominique KAMTA                                      *");
         System.out.println("*************************************************************************************************\n\n");
     }

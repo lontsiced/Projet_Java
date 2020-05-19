@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Map;
 /*
  * @by Cedrick, Nassima, Fred & Baptiste
  */
@@ -26,7 +27,13 @@ public class ThreadWriterOutputFile extends Thread{
 //            System.out.println("ok "+ threadManager.getMesThread().size());
             PrintWriter writer = new PrintWriter(file);
 
+           /* for ( Threading threading:mesThreadings)
+            {
+                Thread thread= new Thread(threading);
+                mesThreads.add(thread);
+                thread.start();
 
+            }*/
 
             for ( Thread thread:mesThreads)
             {
@@ -54,7 +61,8 @@ public class ThreadWriterOutputFile extends Thread{
 
             writer.close();
 
-            System.out.println("- Données traitées et sauvegardées avec succès sur le lien suivant:\n"+threadManager.getAbsoluPath()+"\n");
+            System.out.println("- Données traitées et sauvegardées avec succès. \n- Output File: "+threadManager.getAbsoluPath()
+                    +"\n[************************** FIN SORTIE *****************************]");
 
 
             for ( Thread thread:mesThreads)
